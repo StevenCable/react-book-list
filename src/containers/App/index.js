@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import BookListAppTitle from '../../components/BookListAppTitle.js';
 import NewBookForm from '../../components/NewBookForm.js';
@@ -10,6 +11,7 @@ class App extends Component {
     super();
     this.title = 'Boobs dawg';
     this.doClick=this.doClick.bind(this);
+    this.submitBook = this.submitBook.bind(this)
     this.state = {
       library: Library 
     }
@@ -21,15 +23,29 @@ class App extends Component {
 
   }
 
+
+  submitBook = () => {
+    console.log("book submitted")
+
+  }
+  pseudoXHRRequest (){
+    return new Promise((resolve, reject) => {
+      resolve(Library);
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <BookListAppTitle
           title={this.title} 
           doClick={this.doClick}
+          
         />
           <BookList books={this.state.library}/>
-          <NewBookForm />
+          <NewBookForm 
+            submitBook={this.submitBook}
+          />
       </div>
     );
   }

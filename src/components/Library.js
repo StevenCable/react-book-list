@@ -5,7 +5,7 @@ const Library = [{
   },
   {
     id: 2,
-    title: "The Alchemist",
+    title: "The Alchemy",
     author: "Paulo Coelho"
   },
   {
@@ -14,7 +14,7 @@ const Library = [{
     author: "J.K. Rowling"
   },
 
-]
+];
 
 
 // const Library = (props) => (

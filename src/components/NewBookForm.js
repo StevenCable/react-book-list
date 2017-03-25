@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 export default class NewBookForm extends React.Component {
-  // constructor(){
-  //   super()
+    constructor(props){
+      super(props)
 
-  // }
+      this.state = {
+        title: '';
+        author: '';
+      } 
 
-  render() {
+      
+
+    }
+
+  render(props) {
     return (
       <form>
         <div>
@@ -16,7 +23,7 @@ export default class NewBookForm extends React.Component {
           <input type='text' placeholder='fuckin-B Man' />
         </div>
         <div>
-          <input type='submit' value='fuckin-C Man' />
+          <button onClick={ props.submitBook }>submit</button>
         </div>
       </form>
     )
